@@ -1,7 +1,12 @@
-from collections import Counter
+word1, word2  = "listen", "silent"
 
-my_dict = "This is a test of counter.".replace(" ", "").lower()
+def anagram(word1, word2):
 
-result = dict(Counter(my_dict))
+    if sorted(word1) == sorted(word2):
+        print(f'{word1} is an anagram of {word2}')
+    else:
+        print(f'{word1} is NOT an anagram of {word2}')
 
-print(result)
+anagram(word1, word2)
+anagram('dog', 'god')
+anagram('frog', 'goat')
