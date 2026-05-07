@@ -4,8 +4,9 @@ def invert_dict(entry):
 
     switched = {}
 
-    for authors, books in entry.items():
+    for author, books in entry.items():
         for book in books:
-    print(switched)
+            switched[book] = author
+    return switched
 
-invert_dict(authors)
+print(f'Inverted index: {invert_dict(authors)}')
